@@ -1,0 +1,7 @@
+.idea
+
+build/contracts
+
+
+/node_modules/
+!/build/contracts/UniswapV2Factory.json
