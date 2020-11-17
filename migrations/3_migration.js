@@ -14,7 +14,7 @@ module.exports = async function (deployer, network, accounts) {
   //console.log(JSON.stringify(res,null,2));
 
   if(res.logs.filter( item => item.event === 'Success').length >0){
-    console.log(`gas used less than: ${res.receipt.gasUsed}`)
+    console.log(`gas used less than: ${res.logs["0"].args.gasUsed.toString()}`)
   }
 
   res = await wrapper.littleTest({from: '0xC2F2D954Bb6296b923BC938c32C4C30A8e39015f'});

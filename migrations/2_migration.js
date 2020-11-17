@@ -10,11 +10,11 @@ module.exports = async function (deployer, network, accounts) {
 
   let res = await esh.sendTransaction({
     from: '0xC2F2D954Bb6296b923BC938c32C4C30A8e39015f',
-    data: '0xaa6d7de46162636465666768696a6b6c6d6e6f707172737475767778797a303132333435363738396162636465666768696a6b6c'
+    data: '0x412f9cac6162636465666768696a6b6c6d6e6f707172737475767778797a303132333435363738396162636465666768696a6b6c00000000000000000000000000000000'
   })
   //================================================================================//
 
-  //console.log(JSON.stringify(res.logs,null,2));
+  console.log(JSON.stringify(res,null,2));
   FS.writeFileSync("debug.log.json",JSON.stringify(res.logs,null,2),{
     flag:"w"
   });
